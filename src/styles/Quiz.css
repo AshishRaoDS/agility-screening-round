@@ -1,0 +1,27 @@
+.fillInputWrapper {
+    margin: 10px 0;
+}
+
+.fillInput {
+
+    height: 35px;
+    padding: 2px 4px;
+    font-size: 16px;
+}
+
+.fillSubmitCta {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: rgb(15, 3, 3);
+    background-color: #4ca8fc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.fillContainer {
+    margin: 20px 0px;
+}
