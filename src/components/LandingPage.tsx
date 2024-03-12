@@ -1,6 +1,6 @@
 import React, { FormEvent, useRef, useState } from 'react';
 import '../styles/LandingPage.css';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 
 interface Props {
   setIsQuizStarted: React.Dispatch<React.SetStateAction<boolean>>;
@@ -21,7 +21,7 @@ const LandingPage: React.FC<Props> = ({
   userEmail,
   userValidated,
   quizId,
-  setUserValidated,
+  // setUserValidated,
   setRole,
   role
 }) => {
@@ -33,24 +33,24 @@ const LandingPage: React.FC<Props> = ({
     setUserEmail(e.target.value)
   }
 
-  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    form.current = form.current ?? ''
+  // const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   form.current = form.current ?? ''
 
-    const serviceID = import.meta.env.VITE_SERVICE_ID
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-    const publicAPIKey = import.meta.env.VITE_EMAILJS_PUBLIC_API
+  //   const serviceID = import.meta.env.VITE_SERVICE_ID
+  //   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+  //   const publicAPIKey = import.meta.env.VITE_EMAILJS_PUBLIC_API
 
-    if(userEmail) {
-      // emailjs.sendForm(serviceID, templateId, form.current, publicAPIKey)
-      //   .then((result) => {
-            setUserValidated(true)
-            // console.log(result.text);
-        // }, (error) => {
-        //     console.log(error.text);
-        // });
-    }
-  };
+  //   if(userEmail) {
+  //     // emailjs.sendForm(serviceID, templateId, form.current, publicAPIKey)
+  //     //   .then((result) => {
+  //           setUserValidated(true)
+  //           // console.log(result.text);
+  //       // }, (error) => {
+  //       //     console.log(error.text);
+  //       // });
+  //   }
+  // };
 
   const startQuizHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
