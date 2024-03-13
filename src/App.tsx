@@ -4,7 +4,9 @@ import { useState } from 'react'
 import { SubmitResponse } from './components/SubmitResponse'
 import LandingPage from './components/LandingPage'
 import generateRandomId from './helpers/generateId'
-import { dataEngineerQuestions } from './utils/data/data-engineer';
+import { getRandomElements, newDataEngineeringQuestions } from './balwant-data-engineer';
+
+const DATA_ENGINEER_QUESTION_COUNT = 10
 
 function App() {
   const [isQuizSubmitted, setIsQuizSubmitted] = useState(false)
@@ -15,7 +17,9 @@ function App() {
   const [quizId, setQuizId] = useState(generateRandomId())
   const [role, setRole] = useState("");
 
-  const questions = role && role === 'data-engineer' ? dataEngineerQuestions : dataEngineerQuestions;
+  const questions = role && role === 'data-engineer' ? 
+  getRandomElements(newDataEngineeringQuestions, DATA_ENGINEER_QUESTION_COUNT) : 
+  getRandomElements(newDataEngineeringQuestions, DATA_ENGINEER_QUESTION_COUNT);
 
   const resetQuiz = () => {
     setIsQuizSubmitted(false);

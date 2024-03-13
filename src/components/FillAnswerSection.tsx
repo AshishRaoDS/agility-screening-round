@@ -21,8 +21,8 @@ const FillAnswerSection: React.FC<Props> = ({
     return (
         <>
             <div className='fillContainer'>
-                {currentQuestion.answer.map((value: any, index: number) => (
-                    <div className='fillInputWrapper' key={value}>
+                {Array.from({length:currentQuestion.answerCount}).map((_value: any, index: number) => (
+                    <div className='fillInputWrapper' key={index}>
                         <input placeholder={`Answer No. ${index + 1} `}
                             className='fillInput'
                             type="text"
